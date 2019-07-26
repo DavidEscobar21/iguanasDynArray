@@ -63,11 +63,11 @@ public class DynArray {
     }
 
 
-    public void addFirst(int element){
-
+    public void addFirst(int element, int salto){
+        salto = salto-1;
         size = size + 1;
         int temp;
-        for (int i = 1; i < size; i++) {
+        for (int i = salto; i < size; i++) {
             temp = array[i];
             array[i] = element;
             element = temp;
